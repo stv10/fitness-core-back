@@ -48,3 +48,10 @@ All notable changes to this project will be documented in this section.
 - `feat(database)` Integrated Spring Data JPA and PostgreSQL configurations.
 - `feat(endpoint)` Added `/api/ping` status endpoint for health-checking.
 - `test(endpoint)` Added controller unit tests for `PingController`.
+
+---
+
+## License
+
+This project is open-source and licensed under the **MIT License**. See the [LICENSE](file:///D:/repos/fitness-core/backend/LICENSE) file for more details.
+

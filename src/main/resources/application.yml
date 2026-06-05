@@ -27,6 +27,13 @@ management:
   endpoint:
     health:
       show-details: always
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:default-very-secure-secret-key-1234567890-fitness-core}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://127.0.0.1:5173}
 ---
 # Test profile to run tests with in-memory H2 database
 spring:

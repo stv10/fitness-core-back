@@ -12,11 +12,18 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import com.fitness.backend.security.JwtUtility;
+
 @WebMvcTest(PingController.class)
 public class PingControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @MockitoBean
+    private JwtUtility jwtUtility;
+
 
     @Test
     public void testPingEndpoint() throws Exception {

@@ -50,9 +50,11 @@ jobs:
             ghcr.io/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ github.sha }}
 
-      - name: Connect to Tailscale and Deploy
+      - name: Connect to Tailscale
         uses: tailscale/github-action@v2
         with:
           authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
+
+      - name: Deploy to Dokploy
         run: |
           curl -X POST "${{ secrets.DOKPLOY_WEBHOOK_URL }}"
